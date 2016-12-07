@@ -7,15 +7,16 @@ linkedin = linkedin.init(token);
 
 describe('API: People Test Suite', function() {
 
-	it('should retrieve profile of current user', function() {
-		linkedin.people.picture = function(cb) {
-			this.createCall('GET', 'people/~/picture-urls::(original)', cb)(this.config);
-		};
+  it('should retrieve profile of current user', function() {
+    linkedin.people.picture = function(cb) {
+      this.createCall('GET', 'people/~/picture-urls::(original)', cb)(this.config);
+    };
 
-		linkedin.people.picture(function(err, data) {
-			expect(err).toBe(null);
-			done();
-		});
-	});
+    linkedin.people.picture(function(err, data) {
+      expect(err).toBe(null);
+      done();
+    });
+  });
 
 });
+
